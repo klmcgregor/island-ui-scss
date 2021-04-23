@@ -5,6 +5,12 @@
   "author": "Kyle L. McGregor",
   "license": "MIT",
   "main": "lib/island-ui.css",
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "start": "gulp",
     "tokenize": "gulp tokenize",
@@ -17,14 +23,14 @@
     "type": "git",
     "url": "git+https://github.com/klmcgregor/island-ui-foundation.git"
   },
-  "dependencies": {
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1"
-  },
+  "homepage": "https://github.com/klmcgregor/island-ui-foundation#readme",
+  "dependencies": {},
   "devDependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "json-to-scss": "^1.4.0",

@@ -3,3 +3,12 @@ node_modules
 yarn-error.log
 npm-debug.log
 .sass-cache
+
+# build folders
+lib/
+build/
+dist/
+public/
+www/
+
+.env
