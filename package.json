@@ -1,6 +1,6 @@
 {
   "name": "island-ui-foundation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Design system starting point using SCSS, with foundational tokens, variables, & grid system for non-React based projects. This is meant to be an opinionated starting point, not a complete system.",
   "author": "Kyle L. McGregor",
   "license": "MIT",
@@ -31,6 +31,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "json-to-scss": "^1.4.0",
