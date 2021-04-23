@@ -1,10 +1,10 @@
 {
   "name": "island-ui-foundation",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Design system starting point using SCSS, with foundational tokens, variables, & grid system for non-React based projects. This is meant to be an opinionated starting point, not a complete system.",
   "author": "Kyle L. McGregor",
   "license": "MIT",
-  "main": "lib/island-ui.css",
+  "main": "lib/island-ui-foundation.min.css",
   "directories": {
     "lib": "./lib"
   },
