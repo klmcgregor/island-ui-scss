@@ -1,0 +1,198 @@
+// Definitions from tokens.json spacing section
+// .klm-grid {
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $mainContentMaxWidth;
+}
+
+// Each module has a wrapper -> row -> columns
+// If the module doesn't require a row since it is just one column full width, then omit the row
+
+// Module wrappers have vertical and horizontal half gutter values as the Columns and the Content-Wrapper fill in the inner gutter widths to make full gutters
+.module-wrapper {
+  margin: 0;
+  @include padding-x($gridGutterMobile);
+  @include padding-y($gridGutterMobile);
+  @include breakpoint(1024) {
+    @include padding-x($gridGutter);
+    @include padding-y($gridGutter);
+  }
+}
+  
+.row {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 0;
+  &.row-flex {
+    flex-direction: row;
+  }
+}
+.column-standalone {
+  flex: 0 0 auto;
+  margin: 0;
+  @include padding-x($gridGutterMobile);
+  @include padding-y($gridGutterMobile);
+  @include breakpoint(1024) {
+    @include padding-x($gridGutter);
+    @include padding-y($gridGutter);
+  }
+}
+// Columns have horizontal half gutter widths so that they have a full gutter inbetween each of them
+// They do not have the vertical half gutter widths as they might have a few content pieces that require their own vertical spacing rules
+.column {
+  flex: 0 0 auto;
+  margin: 0;
+  @include padding-x($gridGutterMobile);
+  @include breakpoint(1024) {
+    @include padding-x($gridGutter);
+  }
+  &.column-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.one {
+    @include column-width(1);
+  }
+  &.two {
+    @include column-width(2);
+  }
+  &.three {
+    @include column-width(3);
+  }
+  &.four {
+    @include column-width(4);
+  }
+  &.five {
+    @include column-width(5);
+  }
+  &.six {
+    @include column-width(6);
+   }
+  &.seven {
+    @include column-width(7);
+  }
+  &.eight {
+    @include column-width(8);
+  }
+  &.nine {
+    @include column-width(9);
+  }
+  &.ten {
+    @include column-width(10);
+  }
+  &.eleven {
+    @include column-width(11);
+  }
+  &.twelve {
+    @include column-width(12);
+  }
+
+  // Built-in responsive pattern classes, 
+  // these are highly dependent upon the content context and mainly for example purposes
+  &.two-thirds {
+    @include column-width(1);
+    @include breakpoint(1024) {
+      width: 66.67%;
+    }
+  }
+  &.three-quarters {
+    @include column-width(1);
+    @include breakpoint(1024) {
+      width: 75%;
+    }
+  }
+
+  &.two-up {
+    @include column-width(1);
+    @include breakpoint(768) {
+      @include column-width(2);
+    }
+  }
+  &.three-up {
+    @include column-width(1);
+    @include breakpoint(1024) {
+      @include column-width(3);
+    }
+  }
+  &.four-up {
+    @include column-width(1);
+    @include breakpoint(768) {
+      @include column-width(2);
+    }
+    @include breakpoint(1024) {
+      @include column-width(4);
+    }
+  }
+  &.six-up {
+    @include column-width(1);
+    @include breakpoint(768) {
+      @include column-width(2);
+    }
+    @include breakpoint(1024) {
+      @include column-width(3);
+    }
+    @include breakpoint(1366) {
+      @include column-width(6);
+    }
+  }
+  &.eight-up {
+    @include column-width(1);
+    @include breakpoint(768) {
+      @include column-width(2);
+    }
+    @include breakpoint(1024) {
+      @include column-width(4);
+    }
+    @include breakpoint(1440) {
+      @include column-width(8);
+    }
+  }
+
+  &.three-1024-up {
+    @include column-width(1);
+    @include breakpoint(1024) {
+      @include column-width(3);
+    }
+  }
+  &.four-1024-up {
+    @include column-width(1);
+    @include breakpoint(1024) {
+      @include column-width(4);
+    }
+  }
+ 
+
+  // Grid column content wrapper has vertical outside gutters
+  .content-wrapper {
+    margin: 0;
+    @include padding-y($gridGutterMobile);
+    @include breakpoint(1024) {
+      @include padding-y($gridGutter);
+    }
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &.center {
+      justify-content: center;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+   // Nested rule set
+  .column:first-child {
+    padding-left: 0;
+  }
+  .column:last-child {
+    padding-right: 0;
+  }
+
+}

@@ -1,0 +1,55 @@
+// Typography
+$typography: map-get($tokens, 'typography');
+
+$fontFamilies: map-get($typography, 'fontFamilies');
+$fontWeights: map-get($typography, 'fontWeights');
+$fontSizes: map-get($typography, 'fontSizes');
+
+$mainFontFamily: map-get($fontFamilies, 'primaryFont');
+$mainFontStack: 'Arial, Helvetica, sans-serif';
+
+$primaryFont: $mainFontFamily;
+
+$headingFont: $primaryFont;
+
+@mixin fontSize($value) {
+  font-size: map-get($fontSizes, $value);
+}
+
+@mixin fontWeight($value) {
+  font-weight: map-get($fontWeights, $value);
+}
+
+@mixin fontFamily($value) {
+  font-family: map-get($fontFamilies, $value);
+}
+
+@mixin font($size, $type: 'body') {
+  @if ($type == 'body') {
+    font-family: $primaryFont;
+    @include fontSize($size);
+    @include fontWeight('regular');
+  }
+  @if ($type == 'heading') {
+    font-family: $primaryFont;
+    @include fontSize($size);
+    @include fontWeight('regular');
+  }
+}
+
+body {
+  @include font('s', 'body');
+  @include breakpoint(1440) {
+    @include font('m', 'body');
+  }
+}
+
+p {
+  &.center {
+    text-align: center;
+  }
+}
+
+html {
+  line-height: 1.25;
+}

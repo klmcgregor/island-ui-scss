@@ -1,0 +1,33 @@
+{
+  "name": "island-ui-foundation",
+  "version": "0.1.0",
+  "description": "Design system starting point using SCSS, with foundational tokens, variables, & grid system for non-React based projects. This is meant to be an opinionated starting point, not a complete system.",
+  "author": "Kyle L. McGregor",
+  "license": "MIT",
+  "main": "lib/island-ui.css",
+  "scripts": {
+    "start": "gulp",
+    "tokenize": "gulp tokenize",
+    "dev": "gulp watch",
+    "watcht": "gulp watchtokens",
+    "story": "start-storybook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klmcgregor/island-ui-foundation.git"
+  },
+  "dependencies": {
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1"
+  },
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-shell": "^0.7.1",
+    "json-to-scss": "^1.4.0",
+    "node-sass": "^4.13.1"
+  }
+}

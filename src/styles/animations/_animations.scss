@@ -1,0 +1,37 @@
+// Animations
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollArrowBounce {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(0); }
+  30%  { transform: translateY(-8px); }
+  50%  { transform: translateY(0); }
+  57%  { transform: translateY(-2px); }
+  64%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+
+@keyframes postNavArrowBouncePrev {
+  0%   { transform: rotate(-180deg) translateX(0); }
+  10%  { transform: rotate(-180deg) translateX(0); }
+  30%  { transform: rotate(-180deg) translateX(8px); }
+  50%  { transform: rotate(-180deg) translateX(0); }
+  57%  { transform: rotate(-180deg) translateX(2px); }
+  64%  { transform: rotate(-180deg) translateX(0); }
+  100% { transform: rotate(-180deg) translateX(0); }
+}
+
+@keyframes postNavArrowBounceNext {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(0); }
+  30%  { transform: translateX(8px); }
+  50%  { transform: translateX(0); }
+  57%  { transform: translateX(2px); }
+  64%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}

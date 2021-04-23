@@ -1,0 +1,122 @@
+$tokens: (
+  spacing: (
+    xxxs: 4px,
+    xxs: 8px,
+    xs: 12px,
+    s: 16px,
+    m: 24px,
+    l: 32px,
+    xl: 48px,
+    xxl: 72px,
+    xxxl: 96px,
+    xxxxl: 120px
+  ),
+  grid: (
+    mainContentMaxWidth: 1200px,
+    gutters: (
+      mobile: s,
+      mobileFull: m,
+      desktop: l,
+      desktopFull: xl
+    ),
+    columns: (
+      1: 100%,
+      2: 50%,
+      3: 33.33%,
+      4: 25%,
+      5: 20%,
+      6: 16.66%,
+      7: 14.28%,
+      8: 12.5%,
+      9: 11.11%,
+      10: 10%,
+      11: 9.09%,
+      12: 8.33%
+    )
+  ),
+  breakpoints: (
+    768: 768px,
+    1024: 1024px,
+    1366: 1366px,
+    1440: 1440px,
+    1920: 1920px,
+    2560: 2560px,
+    4K: 3840px
+  ),
+  typography: (
+    fontFamilies: (
+      primaryFont: Arial
+    ),
+    fontWeights: (
+      light: 400,
+      regular: 500,
+      bold: 700,
+      x-bold: 900
+    ),
+    fontSizes: (
+      xxs: 8px,
+      xs: 12px,
+      s: 16px,
+      sm: 20px,
+      m: 24px,
+      l: 32px,
+      xl: 48px,
+      xxl: 72px,
+      xxxl: 96px,
+      xxxxl: 120px
+    )
+  ),
+  colors: (
+    brand: (
+      primary: #90a970,
+      secondary: #90a970,
+      accent: #0099FF
+    ),
+    primary: (
+      green: #90a970,
+      white: #ffffff,
+      black: #000000
+    ),
+    secondary: (
+      gray1: #575756,
+      gray2: #d4ca73,
+      green: #0099FF
+    ),
+    red: (
+      base: #cc3656,
+      xx-light: #f597ac,
+      x-light: #e06a84,
+      light: #d84f6d,
+      dark: #9b344a,
+      x-dark: #702031,
+      xx-dark: #571120
+    ),
+    green: (
+      base: #12721f,
+      xx-light: #4bdd5f,
+      x-light: #33b344,
+      light: #239232,
+      dark: #13521b,
+      x-dark: #13441a,
+      xx-dark: #0c250f
+    ),
+    blue: (
+      base: #3460d8,
+      xx-light: #65baf3,
+      x-light: #47aafc,
+      light: #2f60e7,
+      dark: #204097,
+      x-dark: #1f3a86,
+      xx-dark: #183179
+    ),
+    gray: (
+      base: #cfcfcf,
+      xx-light: #f5f5f5,
+      x-light: #ecebeb,
+      light: #e7e5e5,
+      dark: #a7a6a6,
+      x-dark: #7c7c7c,
+      xx-dark: #474747
+    )
+  )
+);

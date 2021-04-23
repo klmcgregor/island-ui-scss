@@ -1,0 +1,38 @@
+// Breakpoints
+@function getBreakpoint($value) {
+  $breakpoints: map-get($tokens, 'breakpoints');
+  @return map-get($breakpoints, $value);
+}
+// Min-width breakpoint set-up which pulls from $breakpoints list and is used as a media query
+@mixin breakpoint($value) {
+  $bp: getBreakpoint($value);
+  $str: 'only screen and (min-width: #{$bp})';
+  @media #{$str} {
+    @content;
+  }
+}
+
+@mixin breakpointMax1023() {
+  $str: 'only screen and (max-width: 1023px)';
+  @media #{$str} {
+    @content;
+  }
+}
+
+// For targetting retina devices and more
+@mixin pixelRatio($ratio) {
+  $str: 'only screen and (min-device-pixel-ratio: #{$ratio})';
+  @media #{$str} {
+    @content;
+  }
+}
+
+// For targetting legacy browser Internet Explorer 11
+@mixin ie11() {
+  $str: 'only screen and (-ms-high-contrast: active), (-ms-high-contrast: none)';
+  @media #{$str} {
+    @content;
+  }
+}
+
+$mobileNavBreakpoint: 768;

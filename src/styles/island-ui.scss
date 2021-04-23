@@ -1,0 +1,37 @@
+//////////////////
+//  Island UI  //
+/////////////////
+
+// @import "_normalize/normalize";
+
+// Design tokens are needed first
+@import "foundation/_tokens/tokens";
+
+// Foundation settings which use the tokens to populate the variables
+// as well as create helper functions & mixins
+
+// Spacing
+@import "foundation/settings/spacing";
+
+// Media queries
+@import "foundation/settings/screens";
+
+// Typography
+@import "foundation/settings/typography";
+
+// Decorative
+@import "foundation/settings/colors";
+
+// Will remove these or be more specific
+@import "foundation/settings/general";
+
+// Very general styling that effects many things
+@import "foundation/settings/global";
+
+// Grid Spacing
+@import "foundation/grid-system/grid-settings";
+// Grid System
+@import "foundation/grid-system/grid-system";
+
+// Animations
+@import "animations/animations";

@@ -1,0 +1,35 @@
+// Colors
+@function getColor($color, $size: 'base') {
+  $colors: map-get($tokens, 'colors');
+  $selected: map-get($colors, $color);
+  @return map-get($selected, $size);
+}
+@mixin color($color, $size: 'base') {
+  color: getColor($color, $size);
+}
+@mixin background-color($color, $size: 'base') {
+  background-color: getColor($color, $size);
+}
+
+$primary: #90a970;
+$secondary: #90a970;
+$accent: #90a970;
+$white: #ffffff;
+$black: #000000;
+$grey: #f0f0f0;
+$emerald: lighten($primary, 25%);
+
+$textColor: $black;
+
+// This effects the logo color and the navigation at the top of the page
+$topNavColorGeneral: $black;
+
+$topNavColorDark: $black;
+$topNavColorLight: $white;
+
+$topNavColorHomepage: $topNavColorDark;
+
+
+
+
+
