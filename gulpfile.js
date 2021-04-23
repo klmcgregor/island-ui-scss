@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 
 const scssSrc = './src/styles/**/*.scss';
 const cssDest = './lib';
-const cssBuild = `${cssDest}/island-ui.css`;
+const cssBuild = `${cssDest}/island-ui-foundation.css`;
 
 const tokensSrc = './src/styles/foundation/tokens.json';
 const tokensBuild = './src/styles/foundation/_tokens/_tokens.json';
@@ -18,7 +18,7 @@ gulp.task('tokenize', shell.task(`json-to-scss ${tokensSrc} ${tokensBuild}`));
 gulp.task('styles', () => {
   return gulp.src('./src/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('island-ui.css'))
+    .pipe(concat('island-ui-foundation.css'))
     .pipe(gulp.dest(cssDest)) // This will output the non-minified version
     .pipe(rename({ extname: '.min.css' }))
     .pipe(cleanCss())
